@@ -1,0 +1,82 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+}
+.show{
+  visibility: visible !important;
+  transition: 1s;
+}
+#popup{
+  visibility: visible !important;
+  left: 0 !important;
+}
+#show{
+  visibility: visible !important;
+  transition: 1s;
+}
+
+.slick-active div {
+  font-size: 20px !important;
+  border-color: black;
+  /* media queries */
+  @media (max-width: 734px) {
+    font-size: 14px !important;
+  }
+  @media (max-width: 400px) {
+    font-size: 14px !important;
+  }
+}
+#active{
+  right: 0px !important;
+}
+input {
+  outline: none;
+}
+#icon_active{
+  background-color: #262626;
+}
+.inventory .color ul li input:checked ~ label {
+  width: 30px;
+  height: 30px;
+  border: 5px solid transparent;
+}
+.inventory .color ul li label {
+  border: 5px solid #F1F1F1;
+  display: inline-block;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+}
+.inventory .color ul li input {
+  margin-right: 0;
+  position: absolute;
+  z-index: -1;
+  font-size: 18px;
+  opacity: 0;
+}
+.tab-pane{
+  display: none;
+}
+.static0_2 , .tab-content .active{
+  display: block;
+  animation-name: show;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+}
+.tab-content .fade {
+  transition: opacity .15s linear;
+}
+.fade:not(.show) {
+  opacity: 0;
+}
+@keyframes show {
+  0%   {opacity: 0;}
+  25%  {opacity: 25%;}
+  50%  {opacity: 50%;}
+  100% {opacity: 100%;}
+}
